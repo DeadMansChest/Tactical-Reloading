@@ -14,4 +14,5 @@ PersistScripts:
 # - [Tacticool, LUA\tact_reload.lua]
 
 PostRequireScripts:
- - ['*', LUA\tact_reload.lua]
+ - ['lib/units/weapons/raycastweaponbase', LUA\tact_reload.lua]
+ - ['lib/units/weapons/shotgun/newshotgunbase', LUA\tact_reload.lua]
