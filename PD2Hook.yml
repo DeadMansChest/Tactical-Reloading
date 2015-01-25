@@ -13,5 +13,4 @@ KeyBindings:
 PersistScripts:
 
 PostRequireScripts:
- - ['lib/units/weapons/raycastweaponbase', LUA\tact_reload.lua]
- - ['lib/units/weapons/shotgun/newshotgunbase', LUA\tact_reload.lua]
+ - ['*', DMCWO\tact_reload.lua]
