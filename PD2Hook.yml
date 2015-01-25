@@ -11,7 +11,6 @@ KeyBindings:
   
 #Persist scripts are optional, if you don't know what they are, remove/comment the entire section below.
 PersistScripts:
-# - [Tacticool, LUA\tact_reload.lua]
 
 PostRequireScripts:
  - ['lib/units/weapons/raycastweaponbase', LUA\tact_reload.lua]
