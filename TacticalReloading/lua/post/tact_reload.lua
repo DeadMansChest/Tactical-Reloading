@@ -1,10 +1,6 @@
 
 if RequiredScript == "lib/tweak_data/weapontweakdata" then
 
-io.stdout:write("\n[TactRel] tact_reload.lua...")
-
-if DMCWO == nil then
-
 	local old_wtd_init_new_weapons = WeaponTweakData._init_new_weapons
 
 	function WeaponTweakData:_init_new_weapons(...)
@@ -25,21 +21,11 @@ if DMCWO == nil then
 		self.c96.clip_capacity = 10
 		self.mosin.clip_capacity = 5
 	end
-	
-io.stdout:write("is working!\n")
 
-else
-
-io.stdout:write("has been disabled as you're running DMCWO\n")
-
-end
-	
-	
 elseif RequiredScript == "lib/units/weapons/raycastweaponbase" then
 
-if DMCWO == nil then
 
-	--This script is by Deadly Mutton Chops and B1313
+--This script is by Deadly Mutton Chops and B1313
 	function RaycastWeaponBase:clip_full()
 		if tweak_data.weapon[self._name_id].tactical_reload == true then
 			return self:get_ammo_remaining_in_clip() == self:get_ammo_max_per_clip() + 1
@@ -77,8 +63,6 @@ if DMCWO == nil then
 	
 elseif RequiredScript == "lib/units/weapons/shotgun/newshotgunbase" then
 	
-if DMCWO == nil then
-
 	function NewShotgunBase:reload_expire_t()
 		local ammo_remaining_in_clip = self:get_ammo_remaining_in_clip()
 		if self:get_ammo_remaining_in_clip() > 0 and tweak_data.weapon[self._name_id].tactical_reload == true then
@@ -152,7 +136,6 @@ if DMCWO == nil then
 	
 	function SaigaShotgun:update_reloading(t, dt, time_left)
 	end
-	
-end
+
 	
 end
